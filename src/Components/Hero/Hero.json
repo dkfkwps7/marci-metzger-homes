@@ -1,0 +1,36 @@
+{
+  "navItems": [
+    {
+      "id": 1,
+      "name": "HOME",
+      "href": "#",
+      "isActive": true,
+      "isBold": true
+    },
+    {
+      "id": 2,
+      "name": "LISTING",
+      "href": "#",
+      "isActive": false,
+      "isBold": false
+    },
+    {
+      "id": 3,
+      "name": "LET'S MOVE",
+      "href": "#",
+      "isActive": false,
+      "isBold": false
+    },
+    {
+      "id": 4,
+      "name": "ABOUT US",
+      "href": "#",
+      "isActive": false,
+      "isBold": false
+    }
+  ],
+  "heroContent": {
+    "tagline": "Your Goals. Our Expertise. Extraordinary Outcomes.",
+    "description": "For years, Marci Metzger Homes has been the trusted name in residential real estate, helping clients navigate their most important transactions with confidence. We don't just know the market—we master it daily, ensuring you receive top-tier service, strategic guidance, and results that exceed expectations."
+  }
+}
