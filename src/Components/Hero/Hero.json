@@ -32,5 +32,13 @@
   "heroContent": {
     "tagline": "Your Goals. Our Expertise. Extraordinary Outcomes.",
     "description": "For years, Marci Metzger Homes has been the trusted name in residential real estate, helping clients navigate their most important transactions with confidence. We don't just know the market—we master it daily, ensuring you receive top-tier service, strategic guidance, and results that exceed expectations."
+  },
+  "aboutSection": {
+    "greeting": "Hello, I'm",
+    "name": "MARCI METZGER",
+    "subtitle": "Your Trusted Pahrump Realtor.",
+    "description": "With Nearly 30 Years Of Experience In Pahrump Real Estate, I've Built My Reputation On Results, Integrity, And Personalized Service. As Part Of The Ridge Realty Group, I Combine Deep Market Knowledge With A Genuine Commitment To Helping You Succeed. Let's Turn Your Real Estate Goals Into Reality.",
+    "phone": "206-919-6886",
+    "callToAction": "CALL NOW"
   }
 }

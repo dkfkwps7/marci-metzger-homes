@@ -1,67 +1,75 @@
 import React from "react";
 import BG from "/src/assets/bg.svg";
 import Logo from "/src/assets/logo.svg";
+import MM from "/src/assets/marci_metzger.svg";
 import Data from "./Hero.json";
+import "./Hero.css";
 
 const Hero = () => {
   return (
-    <div
-      className="hero"
-      style={{
-        backgroundImage: `url(${BG})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-        width: "100%",
-        height: "100vh",
-      }}
-    >
-      <header className="flex flex-col items-center w-full px-4 sm:px-6 lg:px-8">
-        <img
-          src={Logo}
-          alt="Logo"
-          className="w-30 h-auto mt-2 mb-4 md:w-24 lg:w-30"
-        />
-        <div className="border-t border-white w-screen mb-3 md:mb-3" />
+    <>
+      <div className="hero" style={{ backgroundImage: `url(${BG})` }}>
+        <header className="hero-header">
+          <img src={Logo} alt="Logo" className="hero-logo" />
+          <div className="hero-border" />
 
-        <nav className="font-figtree w-full max-w-6xl">
-          <ul className="flex justify-center space-x-4 sm:space-x-8 md:space-x-10 lg:space-x-12">
-            {Data.navItems.map((item) => (
-              <li key={item.id} className="relative">
-                <a
-                  href={item.href}
-                  className={`${
-                    item.isBold ? "font-bold" : "font-light"
-                  } text-white hover:font-medium text-sm sm:text-base md:text-md whitespace-nowrap`}
+          <nav className="hero-nav">
+            <ul className="hero-nav-list">
+              {Data.navItems.map((item) => (
+                <li key={item.id} className="hero-nav-item">
+                  <a
+                    href={item.href}
+                    className={`hero-nav-link ${
+                      item.isBold ? "font-bold" : "font-light"
+                    }`}
+                  >
+                    {item.name}
+                  </a>
+                  {item.isActive && <div className="hero-nav-indicator"></div>}
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </header>
+
+        <section className="hero-section">
+          <div className="hero-container">
+            <h1 className="hero-title">{Data.heroContent.tagline}</h1>
+            <p className="hero-description">{Data.heroContent.description}</p>
+          </div>
+        </section>
+      </div>
+
+      <section
+        className="new-section"
+        style={{ backgroundColor: "#1C1F35", minHeight: "100vh" }}
+      >
+        <div className="new-section-content-wrapper">
+          <div className="text-content">
+            <p className="greeting">{Data.aboutSection.greeting}</p>
+            <h2 className="name">{Data.aboutSection.name}</h2>
+            <p className="subtitle">{Data.aboutSection.subtitle}</p>
+            <p className="description">{Data.aboutSection.description}</p>
+            <div className="cta-wrapper">
+              <div className="phone-number">
+                <svg
+                  className="phone-icon"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
                 >
-                  {item.name}
-                </a>
-                {item.isActive && (
-                  <div className="absolute -bottom-1 sm:-bottom-2 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-white rounded-full"></div>
-                )}
-              </li>
-            ))}
-          </ul>
-        </nav>
-      </header>
-
-      <section className="flex justify-center items-start px-4 sm:px-6 lg:px-8 mt-48 md:mt-40 lg:mt-40">
-        <div className="max-w-6xl w-full">
-          <h1
-            style={{
-              fontFamily: "'Bona Nova', serif",
-              fontWeight: 400,
-            }}
-            className="font-bona-nova font-normal text-white text-center md:text-left max-w-2xl mx-auto md:mx-0 lg:mx-0 text-2xl sm:text-3xl md:text-4xl lg:text-6xl leading-tight"
-          >
-            {Data.heroContent.tagline}
-          </h1>
-          <p className="font-figtree font-light text-white text-center md:text-left max-w-2xl mx-auto md:ml-16 lg:ml-24 xl:ml-130 mt-4 md:mt-4 lg:mt-2 text-xs sm:text-sm md:text-base leading-relaxed">
-            {Data.heroContent.description}
-          </p>
+                  <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 0 0-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z" />
+                </svg>
+                <span>{Data.aboutSection.phone}</span>
+              </div>
+              <button className="cta-button">
+                {Data.aboutSection.callToAction}
+              </button>
+            </div>
+          </div>
+          <img src={MM} alt="Marci Metzger" className="new-section-image" />
         </div>
       </section>
-    </div>
+    </>
   );
 };
 

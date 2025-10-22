@@ -1,0 +1,542 @@
+html,
+body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+.hero {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+}
+
+.hero header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+@media (min-width: 640px) {
+  .hero header {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero header {
+    padding: 0 2rem;
+  }
+}
+
+.hero-logo {
+  width: 7.5rem;
+  height: auto;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .hero-logo {
+    width: 6rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-logo {
+    width: 7.5rem;
+  }
+}
+
+.hero-border {
+  border-top: 1px solid white;
+  width: 100vw;
+  margin-bottom: 0.75rem;
+}
+
+@media (min-width: 768px) {
+  .hero-border {
+    margin-bottom: 0.75rem;
+  }
+}
+
+.hero-nav {
+  font-family: "Figtree", sans-serif;
+  width: 100%;
+  max-width: 72rem;
+}
+
+.hero-nav-list {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .hero-nav-list {
+    gap: 2rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero-nav-list {
+    gap: 2.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-nav-list {
+    gap: 4rem;
+  }
+}
+
+.hero-nav-item {
+  position: relative;
+}
+
+.hero-nav-link {
+  color: white;
+  font-weight: 300;
+  white-space: nowrap;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  text-decoration: none;
+  transition: font-weight 0.2s ease;
+}
+
+.hero-nav-link:hover {
+  font-weight: 500;
+}
+
+.hero-nav-link.font-bold {
+  font-weight: 700;
+}
+
+@media (min-width: 640px) {
+  .hero-nav-link {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero-nav-link {
+    font-size: 1.125rem;
+  }
+}
+
+.hero-nav-indicator {
+  position: absolute;
+  bottom: -0.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0.25rem;
+  height: 0.25rem;
+  background-color: white;
+  border-radius: 50%;
+}
+
+@media (min-width: 640px) {
+  .hero-nav-indicator {
+    bottom: -0.5rem;
+  }
+}
+
+.hero-section {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0 1rem;
+  margin-top: 12rem;
+}
+
+@media (min-width: 640px) {
+  .hero-section {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-section {
+    padding: 0 2rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero-section {
+    margin-top: 10rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-section {
+    margin-top: 10rem;
+  }
+}
+
+.hero-container {
+  max-width: 72rem;
+  width: 100%;
+}
+
+.hero-title {
+  font-family: "Bona Nova", serif;
+  font-weight: 400;
+  color: white;
+  text-align: center;
+  max-width: 32rem;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.9rem;
+  line-height: 1;
+}
+
+@media (min-width: 640px) {
+  .hero-title {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero-title {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    text-align: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-title {
+    max-width: 40rem;
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+}
+
+.hero-description {
+  font-family: "Figtree", sans-serif;
+  font-weight: 300;
+  color: white;
+  text-align: center;
+  max-width: 36rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+  font-size: 0.7rem;
+  line-height: 1rem;
+  line-height: 1.625;
+}
+
+@media (min-width: 640px) {
+  .hero-description {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero-description {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    text-align: left;
+    margin-left: 4rem;
+    margin-top: 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-description {
+    margin-left: 6rem;
+    margin-top: 0.5rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .hero-description {
+    margin-left: 36rem;
+  }
+}
+
+.hero,
+.new-section {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.new-section {
+  width: 100%;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.new-section-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 2rem 1rem;
+}
+
+.new-section-image {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Mobile First - Small screens */
+@media (min-width: 640px) {
+  .new-section-image {
+    width: 85%;
+    max-width: 700px;
+  }
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .new-section-image {
+    width: 80%;
+    max-width: 800px;
+  }
+
+  .new-section-content {
+    padding: 3rem 2rem;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .new-section-image {
+    width: 75%;
+    max-width: 900px;
+  }
+
+  .new-section-content {
+    padding: 4rem 2rem;
+  }
+}
+
+/* Large Desktop */
+@media (min-width: 1280px) {
+  .new-section-image {
+    width: 70%;
+    max-width: 1000px;
+  }
+
+  .new-section-content {
+    padding: 5rem 2rem;
+  }
+}
+
+/* Extra Large Screens */
+@media (min-width: 1536px) {
+  .new-section-image {
+    width: 38%;
+    max-width: 1200px;
+  }
+}
+
+.new-section-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1400px;
+  padding: 3rem 1.5rem;
+  gap: 2rem;
+}
+
+.text-content {
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  color: white;
+}
+
+.greeting {
+  font-family: "Figtree", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin-bottom: 0rem;
+  color: white;
+}
+
+.name {
+  font-family: "Bona Nova", serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, #d4a574 0%, #f4d03f 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subtitle {
+  font-family: "Figtree", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+  color: white;
+}
+
+.description {
+  font-family: "Figtree", sans-serif;
+  font-size: 0.7rem;
+  font-weight: 300;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  color: white;
+}
+
+.cta-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  border-radius: 50px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.phone-number {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: "Figtree", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: white;
+}
+
+.phone-icon {
+  width: 2rem;
+  height: 2rem;
+  color: white;
+}
+
+.cta-button {
+  background-color: white;
+  color: #1c1f35;
+  font-family: "Figtree", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.75rem 2.5rem;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.05);
+}
+
+.new-section-image {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  display: block;
+}
+
+/* Tablet and up */
+@media (min-width: 768px) {
+  .new-section-content-wrapper {
+    flex-direction: row;
+    gap: 3rem;
+    padding: 4rem 2rem;
+  }
+
+  .text-content {
+    text-align: left;
+    flex: 1;
+  }
+
+  .new-section-image {
+    flex: 1;
+    max-width: 600px;
+  }
+
+  .greeting {
+    font-size: 1.5rem;
+  }
+
+  .name {
+    font-size: 3rem;
+  }
+
+  .subtitle {
+    font-size: 1.25rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+  .cta-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0;
+    max-width: 100%;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .new-section-content-wrapper {
+    gap: 4rem;
+    padding: 5rem 3rem;
+  }
+
+  .greeting {
+    font-size: 1.3rem;
+    margin-bottom: -0.5rem;
+  }
+
+  .name {
+    font-size: 4rem;
+  }
+
+  .subtitle {
+    font-size: 1.5rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+  .phone-number {
+    font-size: 1.75rem;
+  }
+
+  .cta-button {
+    font-size: 1.125rem;
+    padding: 0.75rem 3rem;
+  }
+}
+
+/* Large Desktop */
+@media (min-width: 1280px) {
+  .new-section-content-wrapper {
+    gap: 5rem;
+  }
+
+  .name {
+    font-size: 4.1rem;
+    white-space: nowrap;
+  }
+}
