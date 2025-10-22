@@ -540,3 +540,166 @@ body {
     white-space: nowrap;
   }
 }
+
+.get-it-sold-section {
+  background-color: #f6edd8;
+  width: 100%;
+  padding: 2rem 0rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.get-it-sold-header {
+  font-family: "Figtree", sans-serif;
+  font-weight: 800;
+  font-size: 2.5rem;
+  color: #1c1f35;
+  text-align: center;
+  margin-bottom: 1rem;
+  margin-top: 0;
+}
+
+.get-it-sold-divider {
+  width: 100vw;
+  height: 1px;
+  background-color: #1c1f35;
+  margin-bottom: 3rem;
+}
+
+.get-it-sold-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  width: 100%;
+  max-width: 1400px;
+  margin-bottom: 2.5rem;
+}
+
+.get-it-sold-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.get-it-sold-image {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  margin-bottom: 1.5rem;
+}
+
+.get-it-sold-title {
+  font-family: "Benne", serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: #1c1f35;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.get-it-sold-description {
+  font-family: "Figtree", sans-serif;
+  font-weight: 400;
+  font-size: 0.95rem;
+  color: #1c1f35;
+  line-height: 1.5;
+  max-width: 500px;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .get-it-sold-section {
+    padding: 3rem 0;
+  }
+
+  .get-it-sold-header {
+    font-size: 3rem;
+  }
+
+  .get-it-sold-grid {
+    gap: 3rem;
+  }
+
+  .get-it-sold-image {
+    max-width: 450px;
+  }
+
+  .get-it-sold-title {
+    font-size: 2rem;
+  }
+
+  .get-it-sold-description {
+    font-size: 1rem;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .get-it-sold-section {
+    padding: 4rem 0;
+  }
+
+  .get-it-sold-header {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .get-it-sold-divider {
+    margin-bottom: 4rem;
+  }
+
+  .get-it-sold-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+  }
+
+  .get-it-sold-card {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .get-it-sold-image {
+    max-width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .get-it-sold-title {
+    font-size: 2.25rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .get-it-sold-description {
+    font-size: 1.05rem;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+/* Large Desktop */
+@media (min-width: 1280px) {
+  .get-it-sold-section {
+    padding: 1.5rem 0;
+  }
+
+  .get-it-sold-grid {
+    gap: 4rem;
+  }
+
+  .get-it-sold-title {
+    font-size: 2.5rem;
+  }
+
+  .get-it-sold-description {
+    font-size: 1rem;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .get-it-sold-image {
+    border-radius: 8px;
+  }
+}

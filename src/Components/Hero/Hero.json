@@ -40,5 +40,34 @@
     "description": "With Nearly 30 Years Of Experience In Pahrump Real Estate, I've Built My Reputation On Results, Integrity, And Personalized Service. As Part Of The Ridge Realty Group, I Combine Deep Market Knowledge With A Genuine Commitment To Helping You Succeed. Let's Turn Your Real Estate Goals Into Reality.",
     "phone": "206-919-6886",
     "callToAction": "CALL NOW"
+  },
+  "header": "GET IT SOLD",
+  "contentSections": [
+    {
+      "title": "Top Residential Sales Last 5 Years",
+      "description": "We helped nearly 90 clients in 2021, and closed 28.5 million in sales! Our team works hard everyday to grow and learn, so that we may continue to excel in our market. Our clients deserve our best, & we want to make sure our best is better every year."
+    },
+    {
+      "title": "Don't Just List it...",
+      "description": "Get it SOLD! We exhaust every avenue to ensure our listings are at the fingertips of every possible buyer, getting you top dollar for your home."
+    },
+    {
+      "title": "Guide to Buyers",
+      "description": "Nobody knows the market like we do. Enjoy having a pro at your service. Market analysis, upgrades lists, contractors on speed dial, & more!"
+    }
+  ],
+  "searchSection": {
+    "headerTitle": "Find Your Dream Home",
+    "title": "Search Listings",
+    "fields": [
+      "Location",
+      "Type",
+      "Sort By",
+      "Bedrooms",
+      "Baths",
+      "Min Price",
+      "Max Price"
+    ],
+    "button": "SEARCH"
   }
 }

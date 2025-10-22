@@ -2,6 +2,10 @@ import React from "react";
 import BG from "/src/assets/bg.svg";
 import Logo from "/src/assets/logo.svg";
 import MM from "/src/assets/marci_metzger.svg";
+import Img1 from "/src/assets/img1.svg";
+import Img2 from "/src/assets/img2.svg";
+import Img3 from "/src/assets/img3.svg";
+import Img4 from "/src/assets/img4.svg";
 import Data from "./Hero.json";
 import "./Hero.css";
 
@@ -67,6 +71,25 @@ const Hero = () => {
             </div>
           </div>
           <img src={MM} alt="Marci Metzger" className="new-section-image" />
+        </div>
+      </section>
+
+      <section className="get-it-sold-section">
+        <h2 className="get-it-sold-header">{Data.header}</h2>
+        <div className="get-it-sold-divider" />
+
+        <div className="get-it-sold-grid">
+          {Data.contentSections.map((section, index) => (
+            <div key={index} className="get-it-sold-card">
+              <img
+                src={index === 0 ? Img1 : index === 1 ? Img2 : Img3}
+                alt={section.title}
+                className="get-it-sold-image"
+              />
+              <h3 className="get-it-sold-title">{section.title}</h3>
+              <p className="get-it-sold-description">{section.description}</p>
+            </div>
+          ))}
         </div>
       </section>
     </>
