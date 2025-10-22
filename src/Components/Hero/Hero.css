@@ -703,3 +703,240 @@ body {
     border-radius: 8px;
   }
 }
+
+/* Search Section */
+.search-section {
+  background: linear-gradient(rgba(28, 31, 53, 0.7), rgba(28, 31, 53, 0.7)),
+    url("/src/assets/img4.svg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 1rem;
+}
+
+.search-content {
+  width: 100%;
+  max-width: 1400px;
+  color: white;
+}
+
+.search-header {
+  font-family: "Figtree", sans-serif;
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: #d4a574;
+  text-align: center;
+  letter-spacing: 0.16rem;
+  margin: 0 0 0.25rem 0;
+  text-transform: uppercase;
+}
+
+.search-title {
+  font-family: "Bona Nova", serif;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+  font-size: 2.75rem;
+  margin: 0 0 1.5rem 0;
+}
+
+.search-panel {
+  background: rgba(255, 255, 255, 0.98);
+  color: #1c1f35;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(12, 12, 26, 0.2);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.search-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.field-label {
+  font-family: "Figtree", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #6b6b6b;
+  margin-bottom: 0.5rem;
+}
+
+.select-input,
+.text-input {
+  width: 100%;
+  background-color: white;
+  color: #1c1f35;
+  font-family: "Figtree", sans-serif;
+  font-size: 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  border: 1px solid rgba(28, 31, 53, 0.06);
+  outline: none;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.25rem;
+  grid-column: 1 / -1;
+}
+
+.search-button {
+  background-color: #d4a574;
+  color: #1c1f35;
+  font-family: "Figtree", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0.9rem 2.75rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 6px 18px rgba(212, 165, 116, 0.18);
+}
+
+.search-button:hover {
+  transform: translateY(-2px);
+}
+
+/* responsive grid changes */
+@media (min-width: 640px) {
+  .search-form {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .search-form {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .search-form {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .search-header {
+    font-size: 0.95rem;
+  }
+  .search-title {
+    font-size: 3.25rem;
+  }
+}
+
+/* Logo Carousel Section */
+.logo-carousel-section {
+  background-color: white;
+  width: 100%;
+  padding: 2rem 0;
+  overflow: hidden;
+}
+
+.logo-carousel-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.logo-carousel-track {
+  display: flex;
+  animation: logoCarousel 100s linear infinite;
+  gap: 4rem;
+  padding: 0 2rem;
+  width: max-content;
+}
+
+.logo-carousel-item {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+}
+
+.logo-carousel-image {
+  height: 4rem;
+  width: auto;
+  opacity: 0.8;
+  transition: all 0.3s ease;
+  filter: grayscale(100%);
+}
+
+.logo-carousel-item:hover .logo-carousel-image {
+  opacity: 1;
+  filter: grayscale(0%);
+}
+
+@keyframes logoCarousel {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100% - 4rem));
+  }
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .logo-carousel-section {
+    padding: 5rem 0;
+  }
+
+  .logo-carousel-image {
+    height: 5rem;
+  }
+
+  .logo-carousel-track {
+    gap: 5rem;
+  }
+
+  @keyframes logoCarousel {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-100% - 5rem));
+    }
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .logo-carousel-section {
+    padding: 3.5rem 0;
+  }
+
+  .logo-carousel-image {
+    height: 6rem;
+  }
+
+  .logo-carousel-track {
+    gap: 6rem;
+  }
+
+  @keyframes logoCarousel {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-100% - 6rem));
+    }
+  }
+}
