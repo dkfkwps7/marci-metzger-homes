@@ -1,4 +1,5 @@
 import React from "react";
+const { useState, useEffect } = React;
 import BG from "/src/assets/bg.svg";
 import Logo from "/src/assets/logo.svg";
 import MM from "/src/assets/marci_metzger.svg";
@@ -19,8 +20,46 @@ import Logo3 from "/src/assets/logo3.svg";
 import Logo4 from "/src/assets/logo4.svg";
 import Data from "./Hero.json";
 import "./Hero.css";
+import LogoLoop from "../Animations/LogoLoop/LogoLoop";
+
+const logoData = [
+  { src: Logo1, alt: "Logo 1" },
+  { src: Logo2, alt: "Logo 2" },
+  { src: Logo3, alt: "Logo 3" },
+  { src: Logo4, alt: "Logo 4" },
+];
 
 const Hero = () => {
+  const galleryImages = [
+    { src: Img5, alt: "Gallery Image 5" },
+    { src: Img6, alt: "Gallery Image 6" },
+    { src: Img7, alt: "Gallery Image 7" },
+    { src: Img8, alt: "Gallery Image 8" },
+    { src: Img9, alt: "Gallery Image 9" },
+    { src: Img10, alt: "Gallery Image 10" },
+    { src: Img11, alt: "Gallery Image 11" },
+  ];
+
+  const [currentGalleryIndex, setCurrentGalleryIndex] = React.useState(0);
+
+  // Auto-advance slideshow every 20 seconds
+  React.useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentGalleryIndex((prev) => (prev + 1) % galleryImages.length);
+    }, 20000);
+
+    return () => clearInterval(timer);
+  }, []);
+
+  const handleGalleryNav = (direction) => {
+    if (direction === "next") {
+      setCurrentGalleryIndex((prev) => (prev + 1) % galleryImages.length);
+    } else {
+      setCurrentGalleryIndex((prev) =>
+        prev === 0 ? galleryImages.length - 1 : prev - 1
+      );
+    }
+  };
   return (
     <>
       <div className="hero" style={{ backgroundImage: `url(${BG})` }}>
@@ -230,59 +269,115 @@ const Hero = () => {
         </div>
       </section>
 
-      <section className="logo-carousel-section">
-        <div className="logo-carousel-container">
-          <div className="logo-carousel-track">
-            <div className="logo-carousel-item">
-              <img src={Logo1} alt="Logo 1" className="logo-carousel-image" />
-            </div>
-            <div className="logo-carousel-item">
-              <img src={Logo2} alt="Logo 2" className="logo-carousel-image" />
-            </div>
-            <div className="logo-carousel-item">
-              <img src={Logo3} alt="Logo 3" className="logo-carousel-image" />
-            </div>
-            <div className="logo-carousel-item">
-              <img src={Logo4} alt="Logo 4" className="logo-carousel-image" />
-            </div>
-            {/* Duplicate for seamless loop */}
-            <div className="logo-carousel-item">
-              <img src={Logo1} alt="Logo 1" className="logo-carousel-image" />
-            </div>
-            <div className="logo-carousel-item">
-              <img src={Logo2} alt="Logo 2" className="logo-carousel-image" />
-            </div>
-            <div className="logo-carousel-item">
-              <img src={Logo3} alt="Logo 3" className="logo-carousel-image" />
-            </div>
-            <div className="logo-carousel-item">
-              <img src={Logo4} alt="Logo 4" className="logo-carousel-image" />
-            </div>
-            <div className="logo-carousel-item">
-              <img src={Logo1} alt="Logo 1" className="logo-carousel-image" />
-            </div>
-            <div className="logo-carousel-item">
-              <img src={Logo2} alt="Logo 2" className="logo-carousel-image" />
-            </div>
-            <div className="logo-carousel-item">
-              <img src={Logo3} alt="Logo 3" className="logo-carousel-image" />
-            </div>
-            <div className="logo-carousel-item">
-              <img src={Logo4} alt="Logo 4" className="logo-carousel-image" />
-            </div>
-            <div className="logo-carousel-item">
-              <img src={Logo1} alt="Logo 1" className="logo-carousel-image" />
-            </div>
-            <div className="logo-carousel-item">
-              <img src={Logo2} alt="Logo 2" className="logo-carousel-image" />
-            </div>
-            <div className="logo-carousel-item">
-              <img src={Logo3} alt="Logo 3" className="logo-carousel-image" />
-            </div>
-            <div className="logo-carousel-item">
-              <img src={Logo4} alt="Logo 4" className="logo-carousel-image" />
-            </div>
+      <section className="logo-loop-section">
+        <div
+          style={{
+            height: "190px",
+            alignContent: "center",
+            position: "relative",
+            overflow: "hidden",
+            backgroundColor: "white",
+          }}
+        >
+          <LogoLoop
+            logos={logoData}
+            speed={80}
+            direction="left"
+            logoHeight={120}
+            gap={170}
+            pauseOnHover={false}
+            fadeOut={true}
+            fadeOutColor="#ffffff"
+            ariaLabel="Partner logos"
+          />
+        </div>
+      </section>
+
+      <section className="gallery-section">
+        <h2 className="gallery-header">PHOTO GALLERY</h2>
+        <div className="gallery-divider" />
+
+        <div className="gallery-container">
+          <button
+            className="gallery-control gallery-prev"
+            onClick={() => handleGalleryNav("prev")}
+            aria-label="Previous image"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+            >
+              <path d="M15 18l-6-6 6-6" />
+            </svg>
+          </button>
+
+          <div className="gallery-image-wrapper">
+            <img
+              src={galleryImages[currentGalleryIndex].src}
+              alt={galleryImages[currentGalleryIndex].alt}
+              className="gallery-image"
+            />
           </div>
+
+          <button
+            className="gallery-control gallery-next"
+            onClick={() => handleGalleryNav("next")}
+            aria-label="Next image"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+            >
+              <path d="M9 18l6-6-6-6" />
+            </svg>
+          </button>
+
+          <div className="gallery-indicators">
+            {galleryImages.map((_, index) => (
+              <button
+                key={index}
+                className={`gallery-dot ${
+                  index === currentGalleryIndex ? "active" : ""
+                }`}
+                onClick={() => setCurrentGalleryIndex(index)}
+                aria-label={`Go to image ${index + 1}`}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="services-section">
+        <h2 className="services-header">{Data.servicesSection.headerTitle}</h2>
+        <div className="services-divider" />
+
+        <div className="services-grid">
+          {Data.servicesSection.services.map((service, index) => (
+            <div key={index} className="service-card">
+              <div className="service-number">
+                {String(index + 1).padStart(2, "0")}
+              </div>
+              <div className="service-content">
+                <h3 className="service-title">{service.title}</h3>
+                <p className="service-description">{service.description}</p>
+              </div>
+              <div className="service-ornament">
+                <svg
+                  viewBox="0 0 40 40"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                >
+                  <circle cx="20" cy="20" r="15" />
+                  <path d="M20 12 L20 28 M12 20 L28 20" />
+                </svg>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
     </>
